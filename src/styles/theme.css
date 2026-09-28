@@ -1,0 +1,14 @@
+:root {
+ --font-body: Inter, system-ui, sans-serif;
+ --font-mono: "JetBrains Mono", ui-monospace, monospace;
+ --color-brand: light-dark(#1756c0, #8ab4ff);
+ --color-brand-hover: light-dark(#103e8d, #b7d1ff);
+ --radius: 3px;
+ --radius-lg: 6px;
+}
+.blog-intro { max-width: var(--wide-width); margin: 0 auto; padding: 5rem 1.5rem 1rem; }
+.blog-intro .intro-label { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .14em; color: var(--color-muted); margin-bottom: 1.5rem; }
+.blog-intro h1 { font-size: clamp(2.6rem, 6vw, 5rem); line-height: 1.05; letter-spacing: -.055em; font-weight: 600; margin-bottom: 1.5rem; }
+.blog-intro > p:last-child { max-width: 36rem; font-size: 1.15rem; line-height: 1.65; color: var(--color-text-secondary); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 4px; }
+@media (max-width: 600px) { .blog-intro { padding: 3rem 1rem 1rem; } }

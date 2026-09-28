@@ -1,0 +1,352 @@
+{
+  "$schema": "https://emdashcms.com/seed.schema.json",
+  "version": "1",
+  "meta": {
+    "name": "Ferrats Blog",
+    "description": "Blog pessoal de Leo Ferrato",
+    "author": "Leo Ferrato"
+  },
+  "settings": {
+    "title": "Leo Ferrato",
+    "tagline": "Design, cidade e cultura digital. Um caderno aberto de observações e experiências.",
+    "timezone": "America/Sao_Paulo"
+  },
+  "collections": [
+    {
+      "slug": "posts",
+      "label": "Posts",
+      "labelSingular": "Post",
+      "urlPattern": "/posts/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "scheduling",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Título",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "featured_image",
+          "label": "Imagem de capa",
+          "type": "image"
+        },
+        {
+          "slug": "content",
+          "label": "Conteúdo",
+          "type": "portableText",
+          "searchable": true
+        },
+        {
+          "slug": "excerpt",
+          "label": "Resumo",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "slug": "pages",
+      "label": "Páginas",
+      "labelSingular": "Página",
+      "urlPattern": "/pages/{slug}",
+      "supports": [
+        "drafts",
+        "revisions",
+        "preview",
+        "search",
+        "seo"
+      ],
+      "fields": [
+        {
+          "slug": "title",
+          "label": "Título",
+          "type": "string",
+          "required": true,
+          "searchable": true
+        },
+        {
+          "slug": "content",
+          "label": "Conteúdo",
+          "type": "portableText",
+          "searchable": true
+        }
+      ]
+    }
+  ],
+  "taxonomies": [
+    {
+      "name": "category",
+      "label": "Categorias",
+      "labelSingular": "Categoria",
+      "hierarchical": true,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "design",
+          "label": "Design"
+        },
+        {
+          "slug": "cidade",
+          "label": "Cidade"
+        },
+        {
+          "slug": "cultura-digital",
+          "label": "Cultura digital"
+        },
+        {
+          "slug": "experimentos",
+          "label": "Experimentos"
+        }
+      ]
+    },
+    {
+      "name": "tag",
+      "label": "Tags",
+      "labelSingular": "Tag",
+      "hierarchical": false,
+      "collections": [
+        "posts"
+      ],
+      "terms": [
+        {
+          "slug": "emdash",
+          "label": "EmDash"
+        },
+        {
+          "slug": "notas",
+          "label": "Notas"
+        }
+      ]
+    }
+  ],
+  "bylines": [
+    {
+      "id": "byline-leo",
+      "slug": "leo-ferrato",
+      "displayName": "Leo Ferrato"
+    }
+  ],
+  "menus": [
+    {
+      "name": "primary",
+      "label": "Navegação principal",
+      "items": [
+        {
+          "type": "custom",
+          "label": "Início",
+          "url": "/"
+        },
+        {
+          "type": "custom",
+          "label": "Textos",
+          "url": "/posts"
+        },
+        {
+          "type": "custom",
+          "label": "Sobre",
+          "url": "/pages/sobre"
+        }
+      ]
+    }
+  ],
+  "widgetAreas": [
+    {
+      "name": "sidebar",
+      "label": "Barra lateral",
+      "widgets": [
+        {
+          "type": "component",
+          "componentId": "core:categories",
+          "title": "Categorias"
+        },
+        {
+          "type": "component",
+          "componentId": "core:tags",
+          "title": "Tags"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "label": "Rodapé",
+      "widgets": []
+    }
+  ],
+  "sections": [],
+  "content": {
+    "posts": [
+      {
+        "id": "post-primeira-nota",
+        "slug": "um-caderno-aberto",
+        "status": "published",
+        "data": {
+          "title": "Um caderno aberto",
+          "excerpt": "Um primeiro registro para experimentar o EmDash e abrir espaço para ideias sobre design, cidade e cultura digital.",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Este é um texto de demonstração, criado para testar o blog. Você pode editar ou apagar esta publicação no painel do EmDash.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Um lugar para observar",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b2",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s2",
+                  "text": "Design, cidade e cultura digital são pontos de partida para este espaço: um caderno para reunir referências, perguntas e experiências, sem a obrigação de transformar cada ideia em um projeto acabado.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b3",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s3",
+                  "text": "O primeiro experimento",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b4",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s4",
+                  "text": "Este próprio blog é um experimento. A proposta é testar um jeito de escrever e publicar com autonomia, mantendo a interface simples e a atenção no conteúdo.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b5",
+              "style": "h2",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s5",
+                  "text": "Teste você mesmo",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b6",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s6",
+                  "text": "Abra este post no painel, altere uma frase e publique a mudança. Depois, experimente criar um rascunho, adicionar uma imagem e organizar o texto em uma categoria.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        },
+        "bylines": [
+          {
+            "byline": "byline-leo"
+          }
+        ],
+        "taxonomies": {
+          "category": [
+            "experimentos"
+          ],
+          "tag": [
+            "emdash",
+            "notas"
+          ]
+        }
+      }
+    ],
+    "pages": [
+      {
+        "id": "page-sobre",
+        "slug": "sobre",
+        "status": "published",
+        "data": {
+          "title": "Sobre",
+          "content": [
+            {
+              "_type": "block",
+              "_key": "b0",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s0",
+                  "text": "Sou Leo Ferrato, designer em São Paulo. Este é meu espaço para reunir ideias sobre design, cidades e cultura digital.",
+                  "marks": []
+                }
+              ]
+            },
+            {
+              "_type": "block",
+              "_key": "b1",
+              "style": "normal",
+              "markDefs": [],
+              "children": [
+                {
+                  "_type": "span",
+                  "_key": "s1",
+                  "text": "Entre interfaces, referências visuais e experimentos, a proposta é registrar o que desperta curiosidade e o que aparece pelo caminho.",
+                  "marks": []
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
